@@ -4,7 +4,11 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-  <welcome-file-list>
+    <context-param>
+        <param-name/>
+        <param-value/>
+    </context-param>
+    <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
