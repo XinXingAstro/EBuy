@@ -1,2 +1,2 @@
-# eBuy
-A shopping mall based on SOA.
+# VMall
+基于SOA架构的分布式商城项目
