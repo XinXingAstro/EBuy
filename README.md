@@ -1,2 +1,2 @@
 # eBuy
-A shopping mall based on distributed systems
+A shopping mall based on SOA.
