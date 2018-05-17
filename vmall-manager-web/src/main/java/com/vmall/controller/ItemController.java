@@ -1,5 +1,6 @@
 package com.vmall.controller;
 
+import com.vmall.common.pojo.EasyUIDataGridResult;
 import com.vmall.pojo.TbItem;
 import com.vmall.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +17,18 @@ public class ItemController {
 
     @Autowired
     private ItemService itemService;
+
     @RequestMapping("/item/{itemId}")
     @ResponseBody
     public TbItem getItemById(@PathVariable Long itemId) {
         TbItem tbItem = itemService.getItemById(itemId);
         return tbItem;
+    }
+
+    @RequestMapping("/item/list")
+    @ResponseBody
+    public EasyUIDataGridResult getItemList(Integer page, Integer rows) {
+        EasyUIDataGridResult result = itemService.getItemList(page, rows);
+        return result;
     }
 }
