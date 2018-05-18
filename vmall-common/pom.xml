@@ -12,6 +12,12 @@
     <artifactId>vmall-common</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
+        <!-- 单元测试 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
         <!-- 时间操作组件 -->
         <dependency>
             <groupId>joda-time</groupId>
