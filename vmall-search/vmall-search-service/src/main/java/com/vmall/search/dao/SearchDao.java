@@ -2,8 +2,10 @@ package com.vmall.search.dao;
 
 import com.vmall.common.pojo.SearchItem;
 import com.vmall.common.pojo.SearchResult;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
+import org.apache.solr.client.solrj.impl.CloudSolrClient;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
@@ -22,10 +24,12 @@ import java.util.Map;
 public class SearchDao {
 
     @Autowired
-    private HttpSolrClient.Builder builder;
+    private CloudSolrClient.Builder builder;
+//    private HttpSolrClient.Builder builder;
 
     public SearchResult search(SolrQuery query) throws Exception {
-        SolrClient solrClient = builder.build();
+        CloudSolrClient solrClient = builder.build();
+        solrClient.setDefaultCollection("collection01");
         //根据query对象进行查询
         QueryResponse response = solrClient.query(query);
         //取查询结果
@@ -40,7 +44,13 @@ public class SearchDao {
             SearchItem item = new SearchItem();
             item.setCategory_name((String) solrDocument.get("item_category_name"));
             item.setId((String) solrDocument.get("id"));
-            item.setImage((String) solrDocument.get("item_image"));
+            //取一张图片
+            String image = (String) solrDocument.get("item_image");
+            if (StringUtils.isNotBlank(image)) {
+                image = image.split(",")[0];
+            }
+            item.setImage(image);
+//            item.setImage((String) solrDocument.get("item_image"));
             item.setPrice((Long) solrDocument.get("item_price"));
             item.setSell_point((String) solrDocument.get("item_sell_point"));
             //取高亮显示

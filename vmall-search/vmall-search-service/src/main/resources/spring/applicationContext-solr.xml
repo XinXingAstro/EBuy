@@ -9,9 +9,18 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
     <!-- 单机版solr的连接 -->
-    <bean id="httpSolrClient.Builder" class="org.apache.solr.client.solrj.impl.HttpSolrClient.Builder">
+<!--    <bean id="httpSolrClient.Builder" class="org.apache.solr.client.solrj.impl.HttpSolrClient.Builder">
         <constructor-arg name="baseSolrUrl" value="http://192.168.3.60:8080/solr/vmall"/>
+    </bean> -->
+    <!-- 集群版solr连接 -->
+    <bean id="cloudSolrClient.Builder" class="org.apache.solr.client.solrj.impl.CloudSolrClient.Builder">
+        <constructor-arg name="solrUrls">
+            <list>
+                <value>http://192.168.3.61:8180/solr</value>
+                <value>http://192.168.3.61:8280/solr</value>
+                <value>http://192.168.3.62:8180/solr</value>
+                <value>http://192.168.3.62:8280/solr</value>
+            </list>
+        </constructor-arg>
     </bean>
-
-
 </beans>

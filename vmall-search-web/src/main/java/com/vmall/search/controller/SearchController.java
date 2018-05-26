@@ -22,20 +22,17 @@ public class SearchController {
 
     @RequestMapping("/search")
     public String search(@RequestParam("q") String queryString,
-                         @RequestParam(defaultValue = "1") Integer page, Model model) {
-        try {
-            //把查询条件queryString进行转码，解决get乱码问题
-            queryString = new String(queryString.getBytes("iso8859-1"), "utf-8");
-            //调用服务执行查询
-            SearchResult searchResult = searchService.search(queryString, page, SEARCH_RESULT_ROWS);
-            //把结果传递给页面
-            model.addAttribute("query", queryString);
-            model.addAttribute("totalPages", searchResult.getTotalPages());
-            model.addAttribute("itemList", searchResult.getItemList());
-            model.addAttribute("page", page);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+                         @RequestParam(defaultValue = "1") Integer page, Model model) throws Exception {
+        //把查询条件queryString进行转码，解决get乱码问题
+        queryString = new String(queryString.getBytes("iso8859-1"), "utf-8");
+        //调用服务执行查询
+        SearchResult searchResult = searchService.search(queryString, page, SEARCH_RESULT_ROWS);
+        //把结果传递给页面
+        model.addAttribute("query", queryString);
+        model.addAttribute("totalPages", searchResult.getTotalPages());
+        model.addAttribute("itemList", searchResult.getItemList());
+        model.addAttribute("page", page);
+
         //返回逻辑视图
         return "search";
     }

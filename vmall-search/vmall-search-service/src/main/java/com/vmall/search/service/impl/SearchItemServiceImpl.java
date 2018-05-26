@@ -5,6 +5,7 @@ import com.vmall.common.pojo.VMallResult;
 import com.vmall.search.mapper.SearchItemMapper;
 import com.vmall.search.service.SearchItemService;
 import org.apache.solr.client.solrj.SolrClient;
+import org.apache.solr.client.solrj.impl.CloudSolrClient;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.common.SolrInputDocument;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,12 +23,14 @@ public class SearchItemServiceImpl implements SearchItemService {
     private SearchItemMapper searchItemMapper;
 
     @Autowired
-    private HttpSolrClient.Builder builder;
+    private CloudSolrClient.Builder builder;
+//    private HttpSolrClient.Builder builder;
 
     @Override
     public VMallResult importItemsToIndex() {
         try {
-            SolrClient client = builder.build();
+            CloudSolrClient client = builder.build();
+            client.setDefaultCollection("collection01");
             //1.查询所有商品数据
             List<SearchItem> itemList = searchItemMapper.getItemList();
             //2.遍历商品数据添加到索引库
