@@ -39,6 +39,7 @@
         <activemq.version>5.15.3</activemq.version>
         <freemarker.version>2.3.28</freemarker.version>
         <quartz.version>2.3.0</quartz.version>
+        <javax.jms-api.version>2.0.1</javax.jms-api.version>
         <!--<fastdfs-client.version>1.26.2</fastdfs-client.version>-->
     </properties>
     <dependencyManagement>
@@ -162,13 +163,18 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring-jms</artifactId>
+                <artifactId>spring-context-support</artifactId>
                 <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring-context-support</artifactId>
+                <artifactId>spring-jms</artifactId>
                 <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.jms</groupId>
+                <artifactId>javax.jms-api</artifactId>
+                <version>${javax.jms-api.version}</version>
             </dependency>
             <!-- JSP相关 -->
             <dependency>

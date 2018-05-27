@@ -1,0 +1,332 @@
+
+
+[INFO ] 2018-05-27 00:58:24,822 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+FrameworkServlet 'vmall-search-web': initialization started
+
+
+[INFO ] 2018-05-27 00:58:24,851 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:590)
+Refreshing WebApplicationContext for namespace 'vmall-search-web-servlet': startup date [Sun May 27 00:58:24 CDT 2018]; root of context hierarchy
+
+
+[INFO ] 2018-05-27 00:58:24,918 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:316)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2018-05-27 00:58:25,219 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2018-05-27 00:58:25,392 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:154)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2018-05-27 00:58:25,859 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:547)
+Mapped "{[/search]}" onto public java.lang.String com.vmall.search.controller.SearchController.search(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2018-05-27 00:58:26,095 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:574)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'vmall-search-web-servlet': startup date [Sun May 27 00:58:24 CDT 2018]; root of context hierarchy
+
+
+[INFO ] 2018-05-27 00:58:26,148 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:574)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'vmall-search-web-servlet': startup date [Sun May 27 00:58:24 CDT 2018]; root of context hierarchy
+
+
+[INFO ] 2018-05-27 00:58:26,322 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:199)
+ [DUBBO] Load registry store file /Users/xinxing/.dubbo/dubbo-registry-vmall-search-web-192.168.3.50:2181.cache, data: {com.vmall.search.service.SearchService=empty://192.168.3.43/com.vmall.search.service.SearchService?application=vmall-search-web&category=configurators&dubbo=2.0.1&interface=com.vmall.search.service.SearchService&methods=search&pid=14467&revision=1.0-SNAPSHOT&side=consumer&timestamp=1527305852618 empty://192.168.3.43/com.vmall.search.service.SearchService?application=vmall-search-web&category=routers&dubbo=2.0.1&interface=com.vmall.search.service.SearchService&methods=search&pid=14467&revision=1.0-SNAPSHOT&side=consumer&timestamp=1527305852618 dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search&dubbo=2.0.1&generic=false&interface=com.vmall.search.service.SearchService&methods=search&pid=14486&side=provider&timeout=300000&timestamp=1527306380467}, dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 00:58:26,337 method:com.alibaba.dubbo.common.concurrent.ExecutionList.add(ExecutionList.java:88)
+ [DUBBO] Executor for listenablefuture is null, will use default executor!, dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 00:58:26,349 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2018-05-27 00:58:26,358 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.12--1, built on 03/27/2018 04:49 GMT
+
+
+[INFO ] 2018-05-27 00:58:26,359 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=192.168.3.43
+
+
+[INFO ] 2018-05-27 00:58:26,359 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_161
+
+
+[INFO ] 2018-05-27 00:58:26,359 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2018-05-27 00:58:26,359 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
+
+
+[INFO ] 2018-05-27 00:58:26,359 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds-2.5.2.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
+
+
+[INFO ] 2018-05-27 00:58:26,360 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=/Users/xinxing/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+
+
+[INFO ] 2018-05-27 00:58:26,360 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=/var/folders/gv/mqvmylnn7l1db00j9rrzk_9r0000gn/T/
+
+
+[INFO ] 2018-05-27 00:58:26,361 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2018-05-27 00:58:26,361 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Mac OS X
+
+
+[INFO ] 2018-05-27 00:58:26,361 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=x86_64
+
+
+[INFO ] 2018-05-27 00:58:26,361 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=10.13.4
+
+
+[INFO ] 2018-05-27 00:58:26,361 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=xinxing
+
+
+[INFO ] 2018-05-27 00:58:26,361 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=/Users/xinxing
+
+
+[INFO ] 2018-05-27 00:58:26,361 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=/Users/xinxing/myProjects/VMall/vmall-search-web
+
+
+[INFO ] 2018-05-27 00:58:26,363 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:441)
+Initiating client connection, connectString=192.168.3.50:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@48cec25a
+
+
+[INFO ] 2018-05-27 00:58:26,387 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1028)
+Opening socket connection to server 192.168.3.50/192.168.3.50:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2018-05-27 00:58:26,417 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:878)
+Socket connection established to 192.168.3.50/192.168.3.50:2181, initiating session
+
+
+[INFO ] 2018-05-27 00:58:26,432 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1302)
+Session establishment complete on server 192.168.3.50/192.168.3.50:2181, sessionid = 0x1639e7baf600005, negotiated timeout = 30000
+
+
+[INFO ] 2018-05-27 00:58:26,435 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2018-05-27 00:58:26,538 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:269)
+ [DUBBO] Register: consumer://192.168.3.43/com.vmall.search.service.SearchService?application=vmall-search-web&category=consumers&check=false&dubbo=2.0.1&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&revision=1.0-SNAPSHOT&side=consumer&timestamp=1527400706241, dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 00:58:26,576 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:292)
+ [DUBBO] Subscribe: consumer://192.168.3.43/com.vmall.search.service.SearchService?application=vmall-search-web&category=providers,configurators,routers&dubbo=2.0.1&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&revision=1.0-SNAPSHOT&side=consumer&timestamp=1527400706241, dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 00:58:26,640 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:380)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.3.43/com.vmall.search.service.SearchService?application=vmall-search-web&category=providers,configurators,routers&dubbo=2.0.1&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&revision=1.0-SNAPSHOT&side=consumer&timestamp=1527400706241, urls: [dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search&dubbo=2.0.1&generic=false&interface=com.vmall.search.service.SearchService&methods=search&pid=15829&side=provider&timeout=300000&timestamp=1527400630468, empty://192.168.3.43/com.vmall.search.service.SearchService?application=vmall-search-web&category=configurators&dubbo=2.0.1&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&revision=1.0-SNAPSHOT&side=consumer&timestamp=1527400706241, empty://192.168.3.43/com.vmall.search.service.SearchService?application=vmall-search-web&category=routers&dubbo=2.0.1&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&revision=1.0-SNAPSHOT&side=consumer&timestamp=1527400706241], dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 00:58:26,806 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:273)
+ [DUBBO] Successed connect to server /192.168.3.43:20882 from NettyClient 192.168.3.43 using dubbo version 2.0.1, channel is NettyChannel [channel=[id: 0x43c4b65d, /192.168.3.43:54467 => /192.168.3.43:20882]], dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 00:58:26,806 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:91)
+ [DUBBO] Start NettyClient XinXingMBP.local/192.168.3.43 connect to the server /192.168.3.43:20882, dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 00:58:26,864 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:425)
+ [DUBBO] Refer dubbo service com.vmall.search.service.SearchService from url zookeeper://192.168.3.50:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=vmall-search-web&check=false&dubbo=2.0.1&generic=false&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&register.ip=192.168.3.43&remote.timestamp=1527400630468&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1527400706241, dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 00:58:26,942 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:509)
+FrameworkServlet 'vmall-search-web': initialization completed in 2117 ms
+
+
+[WARN ] 2018-05-27 01:00:43,691 method:org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1205)
+No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'vmall-search-web'
+
+
+[INFO ] 2018-05-27 01:34:48,119 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:117)
+ [DUBBO] disconected from /192.168.3.43:20882,url:dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search-web&check=false&codec=dubbo&dubbo=2.0.1&generic=false&heartbeat=60000&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&register.ip=192.168.3.43&remote.timestamp=1527400630468&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1527400706241, dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[WARN ] 2018-05-27 01:34:50,119 method:com.alibaba.dubbo.remoting.transport.AbstractClient$1.run(AbstractClient.java:170)
+ [DUBBO] client reconnect to 192.168.3.43:20882 find error . url: dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search-web&check=false&codec=dubbo&dubbo=2.0.1&generic=false&heartbeat=60000&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&register.ip=192.168.3.43&remote.timestamp=1527400630468&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1527400706241, dubbo version: 2.0.1, current host: 192.168.3.43
+com.alibaba.dubbo.remoting.RemotingException: client(url: dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search-web&check=false&codec=dubbo&dubbo=2.0.1&generic=false&heartbeat=60000&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&register.ip=192.168.3.43&remote.timestamp=1527400630468&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1527400706241) failed to connect to server /192.168.3.43:20882, error message is:Connection refused: /192.168.3.43:20882
+	at com.alibaba.dubbo.remoting.transport.netty.NettyClient.doConnect(NettyClient.java:122)
+	at com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:266)
+	at com.alibaba.dubbo.remoting.transport.AbstractClient$1.run(AbstractClient.java:155)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: /192.168.3.43:20882
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+
+
+[INFO ] 2018-05-27 01:35:12,178 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:380)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.3.43/com.vmall.search.service.SearchService?application=vmall-search-web&category=providers,configurators,routers&dubbo=2.0.1&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&revision=1.0-SNAPSHOT&side=consumer&timestamp=1527400706241, urls: [empty://192.168.3.43/com.vmall.search.service.SearchService?application=vmall-search-web&category=providers&dubbo=2.0.1&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&revision=1.0-SNAPSHOT&side=consumer&timestamp=1527400706241], dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 01:35:18,272 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:380)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.3.43/com.vmall.search.service.SearchService?application=vmall-search-web&category=providers,configurators,routers&dubbo=2.0.1&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&revision=1.0-SNAPSHOT&side=consumer&timestamp=1527400706241, urls: [dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search&dubbo=2.0.1&generic=false&interface=com.vmall.search.service.SearchService&methods=search&pid=16018&side=provider&timeout=300000&timestamp=1527402918226], dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 01:35:18,275 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:273)
+ [DUBBO] Successed connect to server /192.168.3.43:20882 from NettyClient 192.168.3.43 using dubbo version 2.0.1, channel is NettyChannel [channel=[id: 0xc16ce5c6, /192.168.3.43:55078 => /192.168.3.43:20882]], dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 01:35:18,276 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:91)
+ [DUBBO] Start NettyClient XinXingMBP.local/192.168.3.43 connect to the server /192.168.3.43:20882, dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 01:42:23,404 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:117)
+ [DUBBO] disconected from /192.168.3.43:20882,url:dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search-web&check=false&codec=dubbo&dubbo=2.0.1&generic=false&heartbeat=60000&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&register.ip=192.168.3.43&remote.timestamp=1527402918226&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1527400706241, dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[WARN ] 2018-05-27 01:42:24,847 method:com.alibaba.dubbo.remoting.transport.AbstractClient$1.run(AbstractClient.java:170)
+ [DUBBO] client reconnect to 192.168.3.43:20882 find error . url: dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search-web&check=false&codec=dubbo&dubbo=2.0.1&generic=false&heartbeat=60000&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&register.ip=192.168.3.43&remote.timestamp=1527402918226&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1527400706241, dubbo version: 2.0.1, current host: 192.168.3.43
+com.alibaba.dubbo.remoting.RemotingException: client(url: dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search-web&check=false&codec=dubbo&dubbo=2.0.1&generic=false&heartbeat=60000&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&register.ip=192.168.3.43&remote.timestamp=1527402918226&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1527400706241) failed to connect to server /192.168.3.43:20882, error message is:Connection refused: /192.168.3.43:20882
+	at com.alibaba.dubbo.remoting.transport.netty.NettyClient.doConnect(NettyClient.java:122)
+	at com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:266)
+	at com.alibaba.dubbo.remoting.transport.AbstractClient$1.run(AbstractClient.java:155)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: /192.168.3.43:20882
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+
+
+[INFO ] 2018-05-27 01:42:43,730 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:380)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.3.43/com.vmall.search.service.SearchService?application=vmall-search-web&category=providers,configurators,routers&dubbo=2.0.1&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&revision=1.0-SNAPSHOT&side=consumer&timestamp=1527400706241, urls: [dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search&dubbo=2.0.1&generic=false&interface=com.vmall.search.service.SearchService&methods=search&pid=16018&side=provider&timeout=300000&timestamp=1527402918226, dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search&dubbo=2.0.1&generic=false&interface=com.vmall.search.service.SearchService&methods=search&pid=16055&side=provider&timeout=300000&timestamp=1527403363690], dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 01:42:44,890 method:com.alibaba.dubbo.remoting.transport.netty.NettyClient.doConnect(NettyClient.java:99)
+ [DUBBO] Close old netty channel [id: 0xc16ce5c6, /192.168.3.43:55078 :> /192.168.3.43:20882] on create new netty channel [id: 0xd8adb1d0, /192.168.3.43:55297 => /192.168.3.43:20882], dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 01:42:44,891 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:273)
+ [DUBBO] Successed connect to server /192.168.3.43:20882 from NettyClient 192.168.3.43 using dubbo version 2.0.1, channel is NettyChannel [channel=[id: 0xd8adb1d0, /192.168.3.43:55297 => /192.168.3.43:20882]], dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 01:42:50,216 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:380)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.3.43/com.vmall.search.service.SearchService?application=vmall-search-web&category=providers,configurators,routers&dubbo=2.0.1&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&revision=1.0-SNAPSHOT&side=consumer&timestamp=1527400706241, urls: [dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search&dubbo=2.0.1&generic=false&interface=com.vmall.search.service.SearchService&methods=search&pid=16055&side=provider&timeout=300000&timestamp=1527403363690], dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 01:46:03,389 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:117)
+ [DUBBO] disconected from /192.168.3.43:20882,url:dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search-web&check=false&codec=dubbo&dubbo=2.0.1&generic=false&heartbeat=60000&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&register.ip=192.168.3.43&remote.timestamp=1527402918226&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1527400706241, dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[WARN ] 2018-05-27 01:46:05,182 method:com.alibaba.dubbo.remoting.transport.AbstractClient$1.run(AbstractClient.java:170)
+ [DUBBO] client reconnect to 192.168.3.43:20882 find error . url: dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search-web&check=false&codec=dubbo&dubbo=2.0.1&generic=false&heartbeat=60000&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&register.ip=192.168.3.43&remote.timestamp=1527402918226&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1527400706241, dubbo version: 2.0.1, current host: 192.168.3.43
+com.alibaba.dubbo.remoting.RemotingException: client(url: dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search-web&check=false&codec=dubbo&dubbo=2.0.1&generic=false&heartbeat=60000&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&register.ip=192.168.3.43&remote.timestamp=1527402918226&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1527400706241) failed to connect to server /192.168.3.43:20882, error message is:Connection refused: /192.168.3.43:20882
+	at com.alibaba.dubbo.remoting.transport.netty.NettyClient.doConnect(NettyClient.java:122)
+	at com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:266)
+	at com.alibaba.dubbo.remoting.transport.AbstractClient$1.run(AbstractClient.java:155)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: /192.168.3.43:20882
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+
+
+[INFO ] 2018-05-27 01:46:21,216 method:com.alibaba.dubbo.remoting.transport.netty.NettyClient.doConnect(NettyClient.java:99)
+ [DUBBO] Close old netty channel [id: 0xd8adb1d0, /192.168.3.43:55297 :> /192.168.3.43:20882] on create new netty channel [id: 0x94a3ca51, /192.168.3.43:55336 => /192.168.3.43:20882], dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 01:46:21,216 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:273)
+ [DUBBO] Successed connect to server /192.168.3.43:20882 from NettyClient 192.168.3.43 using dubbo version 2.0.1, channel is NettyChannel [channel=[id: 0x94a3ca51, /192.168.3.43:55336 => /192.168.3.43:20882]], dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 01:46:21,280 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:380)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.3.43/com.vmall.search.service.SearchService?application=vmall-search-web&category=providers,configurators,routers&dubbo=2.0.1&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&revision=1.0-SNAPSHOT&side=consumer&timestamp=1527400706241, urls: [dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search&dubbo=2.0.1&generic=false&interface=com.vmall.search.service.SearchService&methods=search&pid=16060&side=provider&timeout=300000&timestamp=1527403581246, dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search&dubbo=2.0.1&generic=false&interface=com.vmall.search.service.SearchService&methods=search&pid=16055&side=provider&timeout=300000&timestamp=1527403363690], dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[INFO ] 2018-05-27 01:46:24,199 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:380)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.3.43/com.vmall.search.service.SearchService?application=vmall-search-web&category=providers,configurators,routers&dubbo=2.0.1&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&revision=1.0-SNAPSHOT&side=consumer&timestamp=1527400706241, urls: [dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search&dubbo=2.0.1&generic=false&interface=com.vmall.search.service.SearchService&methods=search&pid=16060&side=provider&timeout=300000&timestamp=1527403581246], dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[WARN ] 2018-05-27 01:48:08,915 method:org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1205)
+No mapping found for HTTP request with URI [/item/152740366769680.html] in DispatcherServlet with name 'vmall-search-web'
+
+
+[WARN ] 2018-05-27 01:50:39,760 method:org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1205)
+No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'vmall-search-web'
+
+
+[INFO ] 2018-05-27 01:56:42,059 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:117)
+ [DUBBO] disconected from /192.168.3.43:20882,url:dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search-web&check=false&codec=dubbo&dubbo=2.0.1&generic=false&heartbeat=60000&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&register.ip=192.168.3.43&remote.timestamp=1527402918226&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1527400706241, dubbo version: 2.0.1, current host: 192.168.3.43
+
+
+[WARN ] 2018-05-27 01:56:42,268 method:com.alibaba.dubbo.remoting.transport.AbstractClient$1.run(AbstractClient.java:170)
+ [DUBBO] client reconnect to 192.168.3.43:20882 find error . url: dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search-web&check=false&codec=dubbo&dubbo=2.0.1&generic=false&heartbeat=60000&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&register.ip=192.168.3.43&remote.timestamp=1527402918226&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1527400706241, dubbo version: 2.0.1, current host: 192.168.3.43
+com.alibaba.dubbo.remoting.RemotingException: client(url: dubbo://192.168.3.43:20882/com.vmall.search.service.SearchService?anyhost=true&application=vmall-search-web&check=false&codec=dubbo&dubbo=2.0.1&generic=false&heartbeat=60000&interface=com.vmall.search.service.SearchService&methods=search&pid=15833&register.ip=192.168.3.43&remote.timestamp=1527402918226&revision=1.0-SNAPSHOT&side=consumer&timeout=300000&timestamp=1527400706241) failed to connect to server /192.168.3.43:20882, error message is:Connection refused: /192.168.3.43:20882
+	at com.alibaba.dubbo.remoting.transport.netty.NettyClient.doConnect(NettyClient.java:122)
+	at com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:266)
+	at com.alibaba.dubbo.remoting.transport.AbstractClient$1.run(AbstractClient.java:155)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: /192.168.3.43:20882
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
