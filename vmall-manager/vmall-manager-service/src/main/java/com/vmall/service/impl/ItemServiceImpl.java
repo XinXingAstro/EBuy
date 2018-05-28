@@ -92,4 +92,10 @@ public class ItemServiceImpl implements ItemService {
         //返回结果
         return VMallResult.ok();
     }
+
+    @Override
+    public TbItemDesc getItemDescById(long itemId) {
+        TbItemDesc itemDesc = itemDescMapper.selectByPrimaryKey(itemId);
+        return itemDesc;
+    }
 }
