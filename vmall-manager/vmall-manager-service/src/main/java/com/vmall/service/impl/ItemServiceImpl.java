@@ -6,6 +6,8 @@ import com.github.pagehelper.PageInfo;
 import com.vmall.common.pojo.EasyUIDataGridResult;
 import com.vmall.common.pojo.VMallResult;
 import com.vmall.common.utils.IDUtils;
+import com.vmall.common.utils.JsonUtils;
+import com.vmall.jedis.JedisClient;
 import com.vmall.mapper.TbItemDescMapper;
 import com.vmall.mapper.TbItemMapper;
 import com.vmall.pojo.TbItem;
@@ -13,6 +15,7 @@ import com.vmall.pojo.TbItemDesc;
 import com.vmall.pojo.TbItemExample;
 import com.vmall.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
@@ -36,11 +39,47 @@ public class ItemServiceImpl implements ItemService {
     private JmsTemplate jmsTemplate;
     @Resource(name="itemAddTopic")
     private Destination destination;
+    @Autowired
+    private JedisClient jedisClient;
+    @Value("${ITEM_INFO}")
+    private String ITEM_INFO;
+    @Value("${ITEM_EXPIRE}")
+    private Integer ITEM_EXPIRE;
+
+    public String queryRedis(long itemId, String type) {
+        //查询数据库之前先查询缓存
+        try {
+            return jedisClient.get(ITEM_INFO + ":" + itemId + ":" + type);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public void addItemToRedis(long itemId, Object object, String type) {
+        //把查询结果添加到缓存
+        try {
+            //把结果添加到缓存
+            jedisClient.set(ITEM_INFO+ ":" + itemId + ":" + type, JsonUtils.objectToJson(object));
+            //设置过期时间，提高缓存利用率
+            jedisClient.expire(ITEM_INFO+ ":" + itemId + ":" + type, ITEM_EXPIRE);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     public TbItem getItemById(long itemId) {
-        TbItem tbItem = itemMapper.selectByPrimaryKey(itemId);
-        return tbItem;
+        //查询数据库之前先查询缓存
+        String json = queryRedis(itemId, "BASE");
+        if (json == null) {
+           //如果缓存中没有，则查询数据库
+           TbItem tbItem = itemMapper.selectByPrimaryKey(itemId);
+           addItemToRedis(itemId, tbItem, "BASE");
+           return tbItem;
+        }
+        //把json数据转换成poho
+        return JsonUtils.jsonToPojo(json, TbItem.class);
     }
 
     @Override
@@ -95,7 +134,36 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public TbItemDesc getItemDescById(long itemId) {
+        /*//查询数据库之前先查询缓存
+        try {
+            String json = jedisClient.get(ITEM_INFO + ":" + itemId + ":DESC");
+            if (StringUtils.isNotBlank(json)) {
+                //把json数据转换成pojo
+                return JsonUtils.jsonToPojo(json, TbItemDesc.class);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //如果缓存中没有，则查询数据库
         TbItemDesc itemDesc = itemDescMapper.selectByPrimaryKey(itemId);
-        return itemDesc;
+        //把查询结果添加到缓存
+        try {
+            //把结果添加到缓存
+            jedisClient.set(ITEM_INFO+ ":" + itemId + ":DESC", JsonUtils.objectToJson(itemDesc));
+            //设置过期时间，提高缓存利用率
+            jedisClient.expire(ITEM_INFO+ ":" + itemId + ":DESC", ITEM_EXPIRE);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return itemDesc;*/
+        //查询数据库之前先查询缓存
+        String json = queryRedis(itemId, "DESC");
+        if (json == null) {
+            //如果缓存中没有，则查询数据库
+            TbItemDesc itemDesc = itemDescMapper.selectByPrimaryKey(itemId);
+            //将查询结果添加到缓存
+            addItemToRedis(itemId, itemDesc,"DESC");
+        }
+        return JsonUtils.jsonToPojo(json, TbItemDesc.class);
     }
 }
