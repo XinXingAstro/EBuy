@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>淘淘商城后台管理系统</title>
+<title>VMall商城后台管理系统</title>
 <link rel="stylesheet" type="text/css" href="js/jquery-easyui-1.4.1/themes/default/easyui.css" />
 <link rel="stylesheet" type="text/css" href="js/jquery-easyui-1.4.1/themes/icon.css" />
 <link rel="stylesheet" type="text/css" href="css/taotao.css" />
@@ -35,6 +35,12 @@
 	         		<li data-options="attributes:{'url':'content'}">内容管理</li>
 	         	</ul>
          	</li>
+			<li>
+				<span>索引库管理</span>
+				<ul>
+					<li data-options="attributes:{'url':'import-index'}">导入索引库</li>
+				</ul>
+			</li>
          </ul>
     </div>
     <div data-options="region:'center',title:''">

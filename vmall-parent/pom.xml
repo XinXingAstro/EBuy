@@ -39,6 +39,8 @@
         <activemq.version>5.15.3</activemq.version>
         <freemarker.version>2.3.28</freemarker.version>
         <quartz.version>2.3.0</quartz.version>
+        <javax.jms-api.version>2.0.1</javax.jms-api.version>
+        <!--<fastdfs-client.version>1.26.2</fastdfs-client.version>-->
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -161,13 +163,18 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring-jms</artifactId>
+                <artifactId>spring-context-support</artifactId>
                 <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring-context-support</artifactId>
+                <artifactId>spring-jms</artifactId>
                 <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.jms</groupId>
+                <artifactId>javax.jms-api</artifactId>
+                <version>${javax.jms-api.version}</version>
             </dependency>
             <!-- JSP相关 -->
             <dependency>
@@ -232,11 +239,6 @@
                 <version>${curator.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.curator</groupId>
-                <artifactId>curator-test</artifactId>
-                <version>${curator.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>com.github.sgroschupf</groupId>
                 <artifactId>zkclient</artifactId>
                 <version>${zkclient.version}</version>
@@ -251,6 +253,12 @@
                 <artifactId>freemarker</artifactId>
                 <version>${freemarker.version}</version>
             </dependency>
+            <!--&lt;!&ndash;FastDFS&ndash;&gt;-->
+            <!--<dependency>-->
+                <!--<groupId>com.github.tobato</groupId>-->
+                <!--<artifactId>fastdfs-client</artifactId>-->
+                <!--<version>${fastdfs-client.version}</version>-->
+            <!--</dependency>-->
 
         </dependencies>
     </dependencyManagement>

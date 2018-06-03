@@ -26,6 +26,16 @@
             <artifactId>vmall-manager-interface</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.vmall</groupId>
+            <artifactId>vmall-content-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vmall</groupId>
+            <artifactId>vmall-search-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -103,10 +113,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.apache.curator</groupId>-->
-            <!--<artifactId>curator-test</artifactId>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>com.github.sgroschupf</groupId>
             <artifactId>zkclient</artifactId>
@@ -116,6 +122,25 @@
                     <groupId>log4j</groupId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <!--分页工具-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>fastdfs_client</groupId>
+            <artifactId>fastdfs_client</artifactId>
+            <version>1.25</version>
+        </dependency>
+        <!-- 文件上传组件 -->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
         </dependency>
     </dependencies>
     <build>

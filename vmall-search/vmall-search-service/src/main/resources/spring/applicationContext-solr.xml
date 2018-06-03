@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- 单机版solr的连接 -->
+    <!--<bean id="httpSolrClient.Builder" class="org.apache.solr.client.solrj.impl.HttpSolrClient.Builder">
+        <constructor-arg name="baseSolrUrl" value="http://192.168.3.60:8080/solr/vmall"/>
+    </bean>-->
+    <!-- 集群版solr连接 -->
+    <bean id="cloudSolrClient.Builder" class="org.apache.solr.client.solrj.impl.CloudSolrClient.Builder">
+        <constructor-arg name="solrUrls">
+            <list>
+                <value>http://192.168.3.61:8180/solr</value>
+                <value>http://192.168.3.61:8280/solr</value>
+                <value>http://192.168.3.62:8180/solr</value>
+                <value>http://192.168.3.62:8280/solr</value>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>
