@@ -1,6 +1,7 @@
 package com.vmall.sso.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -15,7 +16,8 @@ public class PageController {
     }
 
     @RequestMapping("/page/login")
-    public String showLogin() {
+    public String showLogin(String url, Model model) {
+        model.addAttribute("redirect", url);
         return "login";
     }
 }

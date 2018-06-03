@@ -13,7 +13,6 @@
         <artifactId>vmall-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>com.vmall</groupId>
     <artifactId>vmall-content</artifactId>
     <packaging>pom</packaging>
 
