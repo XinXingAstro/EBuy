@@ -3,6 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>vmall-common</module>
+        <module>vmall-manager</module>
+        <module>vmall-manager-web</module>
+        <module>vmall-content</module>
+        <module>vmall-portal-web</module>
+        <module>vmall-search</module>
+        <module>vmall-search-web</module>
+        <module>vmall-sso</module>
+        <module>vmall-sso-web</module>
+        <module>vmall-item-web</module>
+        <module>vmall-cart-web</module>
+        <module>vmall-order</module>
+        <module>vmall-order-web</module>
+    </modules>
 
     <groupId>com.vmall</groupId>
     <artifactId>vmall-parent</artifactId>
