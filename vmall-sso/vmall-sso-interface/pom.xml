@@ -13,7 +13,7 @@
 
     <dependencies>
         <dependency>
-            <artifactId>vmall-manager-pojo</artifactId>
+            <artifactId>vmall-pojo</artifactId>
             <groupId>com.vmall</groupId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

@@ -17,6 +17,8 @@
         <module>vmall-cart-web</module>
         <module>vmall-order</module>
         <module>vmall-order-web</module>
+        <module>vmall-dao</module>
+        <module>vmall-pojo</module>
     </modules>
 
     <groupId>com.vmall</groupId>
