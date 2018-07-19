@@ -31,6 +31,6 @@
     <!-- 引用dubbo服务 -->
     <dubbo:application name="vmall-item-web"/>
     <dubbo:registry protocol="zookeeper" address="192.168.3.50:2181"/>
-    <dubbo:reference interface="com.vmall.service.ItemService" id="itemService"/>
+    <dubbo:reference interface="com.vmall.manager.service.ItemService" id="itemService"/>
     <!--<dubbo:reference interface="com.vmall.content.service.ContentService" id="contentService" />-->
 </beans>

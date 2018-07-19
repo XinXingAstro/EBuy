@@ -1,4 +1,4 @@
-package com.vmall.service;
+package com.vmall.manager.service;
 
 import com.vmall.common.pojo.EasyUIDataGridResult;
 import com.vmall.common.pojo.VMallResult;

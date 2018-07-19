@@ -3,7 +3,7 @@ package com.vmall.controller;
 import com.vmall.common.pojo.EasyUIDataGridResult;
 import com.vmall.common.pojo.VMallResult;
 import com.vmall.pojo.TbItem;
-import com.vmall.service.ItemService;
+import com.vmall.manager.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

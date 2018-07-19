@@ -1,4 +1,4 @@
-package com.vmall.service.impl;
+package com.vmall.manager.service.impl;
 
 
 import com.github.pagehelper.PageHelper;
@@ -8,12 +8,12 @@ import com.vmall.common.pojo.VMallResult;
 import com.vmall.common.utils.IDUtils;
 import com.vmall.common.utils.JsonUtils;
 import com.vmall.jedis.JedisClient;
+import com.vmall.manager.service.ItemService;
 import com.vmall.mapper.TbItemDescMapper;
 import com.vmall.mapper.TbItemMapper;
 import com.vmall.pojo.TbItem;
 import com.vmall.pojo.TbItemDesc;
 import com.vmall.pojo.TbItemExample;
-import com.vmall.service.ItemService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

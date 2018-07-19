@@ -19,6 +19,7 @@
         <module>vmall-order-web</module>
         <module>vmall-dao</module>
         <module>vmall-pojo</module>
+        <module>vmall-seller</module>
     </modules>
 
     <groupId>com.vmall</groupId>

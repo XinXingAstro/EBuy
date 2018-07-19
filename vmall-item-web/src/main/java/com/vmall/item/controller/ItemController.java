@@ -3,7 +3,7 @@ package com.vmall.item.controller;
 import com.vmall.item.pojo.Item;
 import com.vmall.pojo.TbItem;
 import com.vmall.pojo.TbItemDesc;
-import com.vmall.service.ItemService;
+import com.vmall.manager.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -4,7 +4,7 @@ import com.vmall.common.pojo.VMallResult;
 import com.vmall.common.utils.CookieUtils;
 import com.vmall.common.utils.JsonUtils;
 import com.vmall.pojo.TbItem;
-import com.vmall.service.ItemService;
+import com.vmall.manager.service.ItemService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,10 +1,10 @@
-package com.vmall.service.impl;
+package com.vmall.manager.service.impl;
 
 import com.vmall.common.pojo.EasyUITreeNode;
+import com.vmall.manager.service.ItemCatService;
 import com.vmall.mapper.TbItemCatMapper;
 import com.vmall.pojo.TbItemCat;
 import com.vmall.pojo.TbItemCatExample;
-import com.vmall.service.ItemCatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

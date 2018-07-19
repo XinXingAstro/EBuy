@@ -3,7 +3,7 @@ package com.vmall.item.listener;
 import com.vmall.item.pojo.Item;
 import com.vmall.pojo.TbItem;
 import com.vmall.pojo.TbItemDesc;
-import com.vmall.service.ItemService;
+import com.vmall.manager.service.ItemService;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import org.springframework.beans.factory.annotation.Autowired;

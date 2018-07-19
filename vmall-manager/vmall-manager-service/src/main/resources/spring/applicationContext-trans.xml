@@ -32,7 +32,7 @@
     <!-- 切面 -->
     <aop:config>
         <aop:advisor advice-ref="txAdvice"
-                     pointcut="execution(* com.vmall.service.*.*(..))" />
+                     pointcut="execution(* com.vmall.manager.service.*.*(..))" />
     </aop:config>
 
 </beans>

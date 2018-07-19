@@ -1,7 +1,7 @@
 package com.vmall.controller;
 
 import com.vmall.common.pojo.EasyUITreeNode;
-import com.vmall.service.ItemCatService;
+import com.vmall.manager.service.ItemCatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
